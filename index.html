@@ -1,2 +1,160 @@
 # Goal-Craft-Soccer
 Lanzamiento de Goal Craft Soccer
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Craft Soccer | Goal Craft Studios</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0b0f0e;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 900px;
+        }
+        .studio-tag {
+            background: #064e3b;
+            color: #34d399;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(52, 211, 153, 0.3);
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #ffffff, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #9ca3af;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 850px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        .feature-card {
+            background: #111816;
+            border: 1px solid #1f2923;
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #34d399;
+        }
+        .feature-card h3 {
+            color: #34d399;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .feature-card p {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        .cta-container {
+            margin: 20px 0 50px 0;
+            text-align: center;
+        }
+        .itch-btn {
+            display: inline-block;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(52, 211, 153, 0.2);
+            border: 2px solid #34d399;
+        }
+        .itch-btn:hover {
+            transform: scale(1.05);
+            filter: brightness(1.15);
+        }
+        .itch-btn img {
+            display: block;
+            width: 280px;
+            height: auto;
+        }
+        footer {
+            padding: 20px;
+            color: #4b5563;
+            font-size: 0.9rem;
+            text-align: center;
+            border-top: 1px solid #111816;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2.3rem; }
+            .subtitle { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <span class="studio-tag">Goal Craft Studios Presenta</span>
+        <h1>Goal Craft Soccer</h1>
+        <p class="subtitle">Sumérgete en la emoción del fútbol rápido, dinámico y callejero. Demuestra tus habilidades en la cancha con mecánicas pulidas y modos de juego diseñados para la máxima diversión.</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>⚽ Partido Rápido</h3>
+                <p>Sal al campo de juego y disputa encuentros intensos de 5 minutos donde cada segundo y cada jugada cuentan para la victoria.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🏆 Modo Campeonato</h3>
+                <p>Conduce a tu equipo hacia la gloria absoluta superando cada fase del torneo hasta levantar la copa más ansiada.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🥅 Tanda de Penales</h3>
+                <p>Pon a prueba tus nervios de acero definiendo el partido desde los once pasos, tanto pateando como bajo los tres palos.</p>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <p style="margin-bottom: 15px; font-weight: bold; color: #34d399; letter-spacing: 1px;">¡DESCÁRGalo O JUGÁLO DIRECTAMENTE AQUÍ!</p>
+            <a href="https://goal-craft-studios.itch.io/goal-craft-soccer" target="_blank" class="itch-btn" title="Ir a Itch.io">
+                <img src="https://static.itch.io/images/badge-color.svg" alt="Descargar en Itch.io">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        Goal Craft Studios &bull; Todos los derechos reservados al juego y la comunidad
+    </footer>
+
+</body>
+</html>
