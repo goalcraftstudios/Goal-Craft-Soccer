@@ -11,150 +11,117 @@ Lanzamiento de Goal Craft Soccer
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
         }
         body {
-            background-color: #0b0f0e;
-            color: #ffffff;
-            min-height: 100vh;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             align-items: center;
-            overflow-x: hidden;
         }
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-            max-width: 900px;
-        }
-        .studio-tag {
-            background: #064e3b;
-            color: #34d399;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            display: inline-block;
-            margin-bottom: 20px;
-            box-shadow: 0 0 15px rgba(52, 211, 153, 0.3);
-        }
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-            background: linear-gradient(45deg, #ffffff, #34d399);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .subtitle {
-            font-size: 1.2rem;
-            color: #9ca3af;
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+        .content {
+            max-width: 800px;
             width: 100%;
-            max-width: 850px;
-            margin-bottom: 40px;
             text-align: left;
         }
-        .feature-card {
-            background: #111816;
-            border: 1px solid #1f2923;
-            padding: 20px;
-            border-radius: 12px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: #34d399;
-        }
-        .feature-card h3 {
-            color: #34d399;
+        h1 {
+            font-size: 2.5rem;
             margin-bottom: 10px;
-            font-size: 1.2rem;
+            color: #111111;
         }
-        .feature-card p {
-            color: #9ca3af;
-            font-size: 0.95rem;
-            line-height: 1.4;
+        .subtitle {
+            font-size: 1.1rem;
+            color: #555555;
+            margin-bottom: 30px;
+            line-height: 1.5;
         }
-        .cta-container {
-            margin: 20px 0 50px 0;
+        .modes-section {
+            margin-bottom: 40px;
+        }
+        .modes-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #222222;
+        }
+        .modes-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #333333;
+        }
+        .modes-list li {
+            margin-bottom: 10px;
+        }
+        .black-footer {
+            background-color: #000000;
+            color: #ffffff;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            padding: 50px 20px;
             text-align: center;
+            margin-top: 50px;
+        }
+        .black-footer h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         .itch-btn {
             display: inline-block;
-            transition: transform 0.3s ease, filter 0.3s ease;
+            transition: transform 0.2s ease, opacity 0.2s ease;
             cursor: pointer;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(52, 211, 153, 0.2);
-            border: 2px solid #34d399;
+            margin-bottom: 25px;
         }
         .itch-btn:hover {
             transform: scale(1.05);
-            filter: brightness(1.15);
+            opacity: 0.9;
         }
         .itch-btn img {
             display: block;
-            width: 280px;
+            width: 250px;
             height: auto;
+            margin: 0 auto;
         }
-        footer {
-            padding: 20px;
-            color: #4b5563;
-            font-size: 0.9rem;
-            text-align: center;
-            border-top: 1px solid #111816;
-            width: 100%;
-        }
-        @media (max-width: 600px) {
-            h1 { font-size: 2.3rem; }
-            .subtitle { font-size: 1rem; }
+        .studio-text {
+            font-size: 1rem;
+            color: #cccccc;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <div class="hero">
-        <span class="studio-tag">Goal Craft Studios Presenta</span>
+    <div class="content">
         <h1>Goal Craft Soccer</h1>
         <p class="subtitle">Sumérgete en la emoción del fútbol rápido, dinámico y callejero. Demuestra tus habilidades en la cancha con mecánicas pulidas y modos de juego diseñados para la máxima diversión.</p>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>⚽ Partido Rápido</h3>
-                <p>Sal al campo de juego y disputa encuentros intensos de 5 minutos donde cada segundo y cada jugada cuentan para la victoria.</p>
-            </div>
-            <div class="feature-card">
-                <h3>🏆 Modo Campeonato</h3>
-                <p>Conduce a tu equipo hacia la gloria absoluta superando cada fase del torneo hasta levantar la copa más ansiada.</p>
-            </div>
-            <div class="feature-card">
-                <h3>🥅 Tanda de Penales</h3>
-                <p>Pon a prueba tus nervios de acero definiendo el partido desde los once pasos, tanto pateando como bajo los tres palos.</p>
-            </div>
-        </div>
 
-        <div class="cta-container">
-            <p style="margin-bottom: 15px; font-weight: bold; color: #34d399; letter-spacing: 1px;">¡DESCÁRGalo O JUGÁLO DIRECTAMENTE AQUÍ!</p>
-            <a href="https://goal-craft-studios.itch.io/goal-craft-soccer" target="_blank" class="itch-btn" title="Ir a Itch.io">
-                <img src="https://static.itch.io/images/badge-color.svg" alt="Descargar en Itch.io">
-            </a>
+        <div class="modes-section">
+            <h2>Modos de Juego</h2>
+            <ul class="modes-list">
+                <li><strong>Partido Rápido:</strong> Sal al campo de juego y disputa encuentros intensos de 5 minutos donde cada segundo y cada jugada cuentan para la victoria.</li>
+                <li><strong>Modo Campeonato:</strong> Conduce a tu equipo hacia la gloria absoluta superando cada fase del torneo hasta levantar la copa más ansiada.</li>
+                <li><strong>Tanda de Penales:</strong> Pon a prueba tus nervios de acero definiendo el partido desde los once pasos, tanto pateando como bajo los tres palos.</li>
+            </ul>
         </div>
     </div>
 
-    <footer>
-        Goal Craft Studios &bull; Todos los derechos reservados al juego y la comunidad
-    </footer>
+    <div class="black-footer">
+        <h2>DESCARGALO EN ITCH.IO</h2>
+        <a href="https://goal-craft-studios.itch.io/goal-craft-soccer" target="_blank" class="itch-btn">
+            <img src="https://static.itch.io/images/badge-color.svg" alt="Descargar en Itch.io">
+        </a>
+        <div class="studio-text">EMPRESA OFICIAL Goal Craft Studios</div>
+    </div>
 
 </body>
 </html>
