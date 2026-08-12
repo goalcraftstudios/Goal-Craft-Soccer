@@ -1,11 +1,11 @@
-# Goal Craft Studios
-Lanzamiento de GoalCraft Soccer
+#Redux Games Codemasters
+Lanzamiento de GoalCraft Soccer y Velocity Circuit
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goal Craft Studios | Goal Craft Soccer</title>
+    <title>Redux Games | Velocity Circuit</title>
     <style>
         * {
             margin: 0;
@@ -15,8 +15,8 @@ Lanzamiento de GoalCraft Soccer
         }
 
         body {
-            background-color: #0b0e14;
-            color: #ffffff;
+            background-color: #ffffff;
+            color: #111111;
             padding: 30px 15px;
             display: flex;
             flex-direction: column;
@@ -31,8 +31,8 @@ Lanzamiento de GoalCraft Soccer
 
         /* Banner de Descargas */
         .downloads-banner-top {
-            background: linear-gradient(135deg, #00ff88 0%, #00b8ff 100%);
-            color: #000000;
+            background: linear-gradient(135deg, #0070f3 0%, #00c6ff 100%);
+            color: #ffffff;
             padding: 18px 20px;
             text-align: center;
             border-radius: 12px;
@@ -40,30 +40,71 @@ Lanzamiento de GoalCraft Soccer
             font-weight: 900;
             margin-bottom: 35px;
             letter-spacing: 1px;
-            box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+            box-shadow: 0 0 25px rgba(0, 112, 243, 0.2);
             text-transform: uppercase;
         }
 
-        /* Sección Goal Craft Soccer */
-        .game-section {
-            background-color: #121721;
-            border: 1px solid #1e2638;
+        /* Card PRÓXIMAMENTE - Velocity Circuit */
+        .upcoming-card {
+            background: linear-gradient(145deg, #f7f9fc, #edf2f7);
+            border: 2px solid #0070f3;
             border-radius: 16px;
             padding: 35px 25px;
             margin-bottom: 40px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), inset 0 0 15px rgba(0, 112, 243, 0.05);
+        }
+
+        .badge-upcoming {
+            display: inline-block;
+            background-color: #0070f3;
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1.5px;
+        }
+
+        .upcoming-card h2 {
+            font-size: 2.3rem;
+            color: #1a202c;
+            margin-bottom: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .upcoming-card p {
+            color: #4a5568;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Sección Redux Games / Información del juego */
+        .game-section {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 35px 25px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
         }
 
         h1 {
             font-size: 2.2rem;
             margin-bottom: 12px;
-            color: #ffffff;
+            color: #1a202c;
             font-weight: 800;
         }
 
         .subtitle {
             font-size: 1.05rem;
-            color: #a0aec0;
+            color: #4a5568;
             margin-bottom: 30px;
             line-height: 1.6;
         }
@@ -71,7 +112,7 @@ Lanzamiento de GoalCraft Soccer
         .modes-section h3 {
             font-size: 1.4rem;
             margin-bottom: 20px;
-            color: #00b8ff;
+            color: #0070f3;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -84,35 +125,36 @@ Lanzamiento de GoalCraft Soccer
         }
 
         .modes-list li {
-            background-color: #1a202c;
+            background-color: #ffffff;
             padding: 16px 20px;
             border-radius: 10px;
-            border-left: 4px solid #00b8ff;
+            border-left: 4px solid #0070f3;
             font-size: 1rem;
-            color: #e2e8f0;
+            color: #2d3748;
             line-height: 1.5;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
         }
 
         .modes-list li strong {
-            color: #ffffff;
+            color: #1a202c;
         }
 
         /* Footer */
         .black-footer {
-            background-color: #121721;
-            border: 1px solid #1e2638;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
             width: 100%;
             padding: 40px 20px;
             text-align: center;
             border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
         }
 
         .downloads-text-bottom {
             font-size: 1.1rem;
             font-weight: 800;
             margin-bottom: 15px;
-            color: #00ff88;
+            color: #0070f3;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
@@ -122,7 +164,7 @@ Lanzamiento de GoalCraft Soccer
             margin-bottom: 20px;
             letter-spacing: 1px;
             text-transform: uppercase;
-            color: #ffffff;
+            color: #1a202c;
         }
 
         .itch-btn {
@@ -134,7 +176,7 @@ Lanzamiento de GoalCraft Soccer
 
         .itch-btn:hover {
             transform: translateY(-3px) scale(1.03);
-            filter: drop-shadow(0 5px 15px rgba(255, 36, 79, 0.4));
+            filter: drop-shadow(0 5px 15px rgba(0, 112, 243, 0.3));
         }
 
         .itch-btn img {
@@ -158,32 +200,39 @@ Lanzamiento de GoalCraft Soccer
     <div class="container">
         <!-- Banner Top -->
         <div class="downloads-banner-top">
-            🚀 ¡MÁS DE 100K DE DESCARGAS EN ITCH.IO! 🔥
+            🏎️ ¡NUEVO LANZAMIENTO DE REDUX GAMES CODMASTERS! 🏁
         </div>
 
-        <!-- Goal Craft Soccer -->
+        <!-- PRÓXIMAMENTE: Velocity Circuit -->
+        <div class="upcoming-card">
+            <span class="badge-upcoming">⏳ Próximamente</span>
+            <h2>⚡ Velocity Circuit 🌐</h2>
+            <p>Hemos cambiado nuestro nombre de empresa de <em>Goal Craft Studios</em> (que estaba enfocado solo a juegos de fútbol) a <strong>Redux Games Codemasters</strong>. Con este cambio de identidad y de enfoque hacia todo tipo de juegos, estamos trabajando arduamente en traerles un nuevo título llamado <strong>Velocity Circuit</strong>, para subir muchísimos juegos variados y no solo de fútbol. ¡Prepárate para la velocidad! 🏆</p>
+        </div>
+
+        <!-- Redux Games Codemasters Racing Section -->
         <div class="game-section">
-            <h1>⚽ Goal Craft Soccer</h1>
-            <p class="subtitle">Sumérgete en la emoción del fútbol rápido, dinámico y callejero. Demuestra tus habilidades en la cancha con mecánicas pulidas y modos de juego diseñados para la máxima diversión. 💥</p>
+            <h1>🏁 Velocity Circuit</h1>
+            <p class="subtitle">Siente la velocidad máxima y toma el control total en la pista. Desarrollado por Redux Games Codemasters con mecánicas profesionales de conducción, gestión avanzada y modos de juego diseñados para la máxima adrenalina. 💥</p>
 
             <div class="modes-section">
                 <h3>🕹️ Modos de Juego</h3>
                 <ul class="modes-list">
-                    <li><strong>⚡ Partido Rápido:</strong> Sal al campo de juego y disputa encuentros intensos de 5 minutos donde cada segundo y cada jugada cuentan para la victoria.</li>
-                    <li><strong>🏆 Modo Campeonato:</strong> Conduce a tu equipo hacia la gloria absoluta superando cada fase del torneo hasta levantar la copa más ansiada.</li>
-                    <li><strong>🎯 Tanda de Penales:</strong> Pon a prueba tus nervios de acero definiendo el partido desde los once pasos, tanto pateando como bajo los tres palos.</li>
+                    <li><strong>🌐 Multijugador Online:</strong> Compite directamente contra jugadores de todo el mundo en pistas emocionantes donde la estrategia y la velocidad definen al ganador.</li>
+                    <li><strong>🏆 Modo Campeonato:</strong> Conduce hacia la gloria absoluta superando cada desafío y circuito hasta levantar el trofeo mundial.</li>
+                    <li><strong>⚡ Carrera Rápida:</strong> Entra directo a la pista para disputar pruebas intensas personalizando las condiciones de clima, parrilla y estrategia.</li>
                 </ul>
             </div>
         </div>
 
         <!-- Footer -->
         <div class="black-footer">
-            <div class="downloads-text-bottom">💎 ¡GRACIAS A LA COMUNIDAD POR LAS 100K DESCARGAS! 💎</div>
+            <div class="downloads-text-bottom">💎 ¡PREPÁRATE PARA LA NUEVA ERA CON REDUX GAMES CODMASTERS! 💎</div>
             <h3>DESCARGAR EN ITCH.IO</h3>
             <a href="https://goal-craft-studios.itch.io/goal-craft-soccer" target="_blank" class="itch-btn">
                 <img src="https://static.itch.io/images/badge-color.svg" alt="Descargar en Itch.io">
             </a>
-            <div class="studio-text">👑 Goal Craft Studios | Oficial</div>
+            <div class="studio-text">👑 Redux Games Codemasters | Oficial</div>
         </div>
     </div>
 
