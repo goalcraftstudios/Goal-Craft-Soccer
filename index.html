@@ -3,189 +3,88 @@ Lanzamiento de Goal Craft Soccer
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goal Craft Studios | Goal Craft Soccer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #0b0e14;
-            color: #ffffff;
-            padding: 30px 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 850px;
-            width: 100%;
-        }
-
-        /* Banner de Descargas */
-        .downloads-banner-top {
-            background: linear-gradient(135deg, #00ff88 0%, #00b8ff 100%);
-            color: #000000;
-            padding: 18px 20px;
-            text-align: center;
-            border-radius: 12px;
-            font-size: 1.15rem;
-            font-weight: 900;
-            margin-bottom: 35px;
-            letter-spacing: 1px;
-            box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
-            text-transform: uppercase;
-        }
-
-        /* Sección Goal Craft Soccer */
-        .game-section {
-            background-color: #121721;
-            border: 1px solid #1e2638;
-            border-radius: 16px;
-            padding: 35px 25px;
-            margin-bottom: 40px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 12px;
-            color: #ffffff;
-            font-weight: 800;
-        }
-
-        .subtitle {
-            font-size: 1.05rem;
-            color: #a0aec0;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .modes-section h3 {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            color: #00b8ff;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .modes-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .modes-list li {
-            background-color: #1a202c;
-            padding: 16px 20px;
-            border-radius: 10px;
-            border-left: 4px solid #00b8ff;
-            font-size: 1rem;
-            color: #e2e8f0;
-            line-height: 1.5;
-        }
-
-        .modes-list li strong {
-            color: #ffffff;
-        }
-
-        /* Footer */
-        .black-footer {
-            background-color: #121721;
-            border: 1px solid #1e2638;
-            width: 100%;
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-        }
-
-        .downloads-text-bottom {
-            font-size: 1.1rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-            color: #00ff88;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .black-footer h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #ffffff;
-        }
-
-        .itch-btn {
-            display: inline-block;
-            transition: transform 0.2s ease, filter 0.2s ease;
-            cursor: pointer;
-            margin-bottom: 25px;
-        }
-
-        .itch-btn:hover {
-            transform: translateY(-3px) scale(1.03);
-            filter: drop-shadow(0 5px 15px rgba(255, 36, 79, 0.4));
-        }
-
-        .itch-btn img {
-            display: block;
-            width: 240px;
-            height: auto;
-            margin: 0 auto;
-        }
-
-        .studio-text {
-            font-size: 0.9rem;
-            color: #718096;
-            letter-spacing: 2px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Craft Studios - Goal Craft Store</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0d1117; color: #c9d1d9; margin: 0; padding: 20px; display: flex; justify-content: center; }
+    .container { max-width: 800px; width: 100%; background: #161b22; padding: 30px; border-radius: 10px; border: 1px solid #30363d; text-align: center; }
+    h1 { color: #f0f6fc; margin-bottom: 5px; }
+    .subtitle { color: #8b949e; margin-bottom: 20px; }
+    .badges { margin: 15px 0; }
+    .badges img { margin: 3px; }
+    .btn-download { display: inline-block; background-color: #238636; color: white; padding: 12px 24px; font-weight: bold; border-radius: 6px; margin: 20px 0; cursor: default; }
+    hr { border: 0; height: 1px; background: #30363d; margin: 25px 0; }
+    .section-title { text-align: left; color: #f0f6fc; border-bottom: 1px solid #30363d; padding-bottom: 8px; }
+    p { text-align: left; line-height: 1.6; color: #8b949e; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left; margin-top: 15px; }
+    .card { background: #21262d; padding: 15px; border-radius: 6px; border: 1px solid #30363d; }
+    .card h4 { margin: 0 0 8px 0; color: #f0f6fc; }
+    ul, ol { text-align: left; color: #8b949e; line-height: 1.6; }
+    footer { margin-top: 30px; font-size: 12px; color: #8b949e; }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Banner Top -->
-        <div class="downloads-banner-top">
-            🚀 ¡MÁS DE 100K DE DESCARGAS EN ITCH.IO! 🔥
-        </div>
+<div class="container">
+  <h1>⚡ Goal Craft Studios ⚡</h1>
+  <div class="subtitle">Desarrollo de Apps y Experiencias Móviles</div>
 
-        <!-- Goal Craft Soccer -->
-        <div class="game-section">
-            <h1>⚽ Goal Craft Soccer</h1>
-            <p class="subtitle">Sumérgete en la emoción del fútbol rápido, dinámico y callejero. Demuestra tus habilidades en la cancha con mecánicas pulidas y modos de juego diseñados para la máxima diversión. 💥</p>
+  <div class="badges">
+    <img src="https://img.shields.io/badge/PRÓXIMAMENTE-GOAL%20CRAFT%20STORE-red?style=for-the-badge" alt="Status">
+    <img src="https://img.shields.io/badge/PLATAFORMA-ANDROID-brightgreen?style=for-the-badge&logo=android" alt="Platform">
+    <img src="https://img.shields.io/badge/ESTADO-EN%20DESARROLLO-orange?style=for-the-badge" alt="Version">
+  </div>
 
-            <div class="modes-section">
-                <h3>🕹️ Modos de Juego</h3>
-                <ul class="modes-list">
-                    <li><strong>⚡ Partido Rápido:</strong> Sal al campo de juego y disputa encuentros intensos de 5 minutos donde cada segundo y cada jugada cuentan para la victoria.</li>
-                    <li><strong>🏆 Modo Campeonato:</strong> Conduce a tu equipo hacia la gloria absoluta superando cada fase del torneo hasta levantar la copa más ansiada.</li>
-                    <li><strong>🎯 Tanda de Penales:</strong> Pon a prueba tus nervios de acero definiendo el partido desde los once pasos, tanto pateando como bajo los tres palos.</li>
-                </ul>
-            </div>
-        </div>
+  <div class="btn-download">🚀 PRÓXIMAMENTE EN ITCH.IO</div>
 
-        <!-- Footer -->
-        <div class="black-footer">
-            <div class="downloads-text-bottom">💎 ¡GRACIAS A LA COMUNIDAD POR LAS 100K DESCARGAS! 💎</div>
-            <h3>DESCARGAR EN ITCH.IO</h3>
-            <a href="https://goal-craft-studios.itch.io/goal-craft-soccer" target="_blank" class="itch-btn">
-                <img src="https://static.itch.io/images/badge-color.svg" alt="Descargar en Itch.io">
-            </a>
-            <div class="studio-text">👑 Goal Craft Studios | Oficial</div>
-        </div>
+  <hr>
+
+  <h3 class="section-title">📌 ¡Se viene Goal Craft Store!</h3>
+  <p>En <strong>Goal Craft Studios</strong> estamos trabajando en nuestro próximo gran proyecto: <strong>Goal Craft Store</strong>.</p>
+  <p>Una nueva aplicación diseñada para que puedas encontrar y descargar los <strong>juegos más actualizados</strong>, rápidos y optimizados para tu dispositivo Android, todo desde un solo lugar fácil de usar.</p>
+
+  <h3 class="section-title">⚡ ¿Qué ofrecerá Goal Craft Store?</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>🎮 Juegos Actualizados</h4>
+      <p>Catálogo con las últimas versiones de tus juegos favoritos listos para instalar.</p>
     </div>
+    <div class="card">
+      <h4>🚀 Rápido y Ligero</h4>
+      <p>Una app super liviana que no consume recursos ni ralentiza tu teléfono.</p>
+    </div>
+    <div class="card">
+      <h4>🛡️ Descargas Seguras</h4>
+      <p>Todo el contenido verificado para garantizar la mejor experiencia.</p>
+    </div>
+    <div class="card">
+      <h4>🎨 Interfaz Moderna</h4>
+      <p>Diseño limpio y cómodo para encontrar lo que buscas en segundos.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 class="section-title">🛠️ Requisitos del Sistema</h3>
+  <ul>
+    <li><strong>Sistema Operativo:</strong> Android 8.0 o superior.</li>
+    <li><strong>Conexión:</strong> Requerida para navegar el catálogo y descargar contenido.</li>
+  </ul>
+
+  <h3 class="section-title">📖 Próximos Pasos</h3>
+  <ol>
+    <li>Mantente atento a las novedades de <strong>Goal Craft Studios</strong>.</li>
+    <li>Muy pronto compartiremos el archivo de instalación oficial.</li>
+    <li>¡Prepárate para disfrutar de <strong>Goal Craft Store</strong>!</li>
+  </ol>
+
+  <hr>
+
+  <footer>
+    © Todos los derechos reservados a Santino R. Goal Craft Studios
+  </footer>
+</div>
 
 </body>
 </html>
