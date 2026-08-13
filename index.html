@@ -17,10 +17,22 @@ Lanzamiento de Goal Craft Soccer
     hr { border: 0; height: 1px; background: #30363d; margin: 25px 0; }
     .section-title { text-align: left; color: #f0f6fc; border-bottom: 1px solid #30363d; padding-bottom: 8px; }
     p { text-align: left; line-height: 1.6; color: #8b949e; }
+    
+    /* Caja de Peligro / Riesgo (Amarilla) */
+    .warning-box { background: rgba(255, 204, 0, 0.15); border-left: 4px solid #ffcc00; padding: 15px; border-radius: 6px; text-align: left; margin: 20px 0; }
+    .warning-box h4 { margin: 0 0 8px 0; color: #ffcc00; display: flex; align-items: center; gap: 8px; }
+    .warning-box p { color: #c9d1d9; margin: 5px 0; font-size: 14px; }
+
+    /* Caja de Alerta de Seguridad (Naranja) */
+    .alert-box { background: rgba(210, 153, 34, 0.15); border-left: 4px solid #d29922; padding: 15px; border-radius: 6px; text-align: left; margin: 20px 0; }
+    .alert-box h4 { margin: 0 0 8px 0; color: #f2cc60; display: flex; align-items: center; gap: 8px; }
+    .alert-box p { color: #c9d1d9; margin: 5px 0; font-size: 14px; }
+    .alert-box ul { margin: 8px 0 0 20px; padding: 0; color: #8b949e; font-size: 13px; }
+
     .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left; margin-top: 15px; }
     .card { background: #21262d; padding: 15px; border-radius: 6px; border: 1px solid #30363d; }
     .card h4 { margin: 0 0 8px 0; color: #f0f6fc; }
-    ul, ol { text-align: left; color: #8b949e; line-height: 1.6; }
+    ol, ul { text-align: left; color: #8b949e; line-height: 1.6; }
     footer { margin-top: 30px; font-size: 12px; color: #8b949e; }
   </style>
 </head>
@@ -42,7 +54,25 @@ Lanzamiento de Goal Craft Soccer
 
   <h3 class="section-title">📌 ¡Se viene Goal Craft Store!</h3>
   <p>En <strong>Goal Craft Studios</strong> estamos trabajando en nuestro próximo gran proyecto: <strong>Goal Craft Store</strong>.</p>
-  <p>Una nueva aplicación diseñada para que puedas encontrar y descargar los <strong>juegos más actualizados</strong>, rápidos y optimizados para tu dispositivo Android, todo desde un solo lugar fácil de usar.</p>
+  <p>Una nueva aplicación diseñada para que puedas encontrar y descargar los <strong>juegos y apps más actualizados</strong>, rápidos y optimizados para tu dispositivo Android, todo desde un solo lugar fácil de usar.</p>
+
+  <!-- Caja de Advertencia y Responsabilidad (Amarilla) -->
+  <div class="warning-box">
+    <h4>⚠️ TÉRMINOS Y RESPONSABILIDAD</h4>
+    <p>Si vas a instalar esta aplicación, debes aceptar nuestros términos de privacidad y acuerdos. La instalación de esta aplicación se realiza estrictamente <strong>bajo tu propio riesgo</strong>, y tú asumes la responsabilidad total y absoluta de los archivos que decidas descargar a través de ella.</p>
+  </div>
+
+  <!-- Caja de Alerta de Seguridad (Naranja) -->
+  <div class="alert-box">
+    <h4>🛡️ AVISO IMPORTANTE DE SEGURIDAD</h4>
+    <p><strong>Nuestra aplicación oficial (Goal Craft Store APK) es 100% limpia y segura.</strong></p>
+    <p>Sin embargo, estamos trabajando activamente en eliminar apps no seguras. Al ser un catálogo, algunas aplicaciones de terceros o enlaces externos podrían contener malware o redireccionar a sitios web externos.</p>
+    <ul>
+      <li>Ten cuidado y verifica bien los archivos antes de instalarlos.</li>
+      <li>Evita ingresar datos personales si eres redireccionado a páginas externas.</li>
+      <li>Descarga bajo tu propia responsabilidad.</li>
+    </ul>
+  </div>
 
   <h3 class="section-title">⚡ ¿Qué ofrecerá Goal Craft Store?</h3>
   <div class="grid">
@@ -55,8 +85,8 @@ Lanzamiento de Goal Craft Soccer
       <p>Una app super liviana que no consume recursos ni ralentiza tu teléfono.</p>
     </div>
     <div class="card">
-      <h4>🛡️ Descargas Seguras</h4>
-      <p>Todo el contenido verificado para garantizar la mejor experiencia.</p>
+      <h4>🛡️ Filtro en Desarrollo</h4>
+      <p>Trabajamos continuamente para limpiar el catálogo y ofrecer contenido seguro.</p>
     </div>
     <div class="card">
       <h4>🎨 Interfaz Moderna</h4>
