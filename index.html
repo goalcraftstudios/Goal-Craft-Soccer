@@ -2,123 +2,239 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Goal Craft Studios - Goal Craft Store</title>
-  <style>
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0d1117; color: #c9d1d9; margin: 0; padding: 20px; display: flex; justify-content: center; }
-    .container { max-width: 800px; width: 100%; background: #161b22; padding: 30px; border-radius: 10px; border: 1px solid #30363d; text-align: center; }
-    h1 { color: #f0f6fc; margin-bottom: 5px; }
-    .subtitle { color: #8b949e; margin-bottom: 20px; }
-    .badges { margin: 15px 0; }
-    .badges img { margin: 3px; }
-    .btn-download { display: inline-block; background-color: #238636; color: white; padding: 12px 24px; font-weight: bold; border-radius: 6px; margin: 20px 0; cursor: default; }
-    hr { border: 0; height: 1px; background: #30363d; margin: 25px 0; }
-    .section-title { text-align: left; color: #f0f6fc; border-bottom: 1px solid #30363d; padding-bottom: 8px; }
-    p { text-align: left; line-height: 1.6; color: #8b949e; }
-    
-    /* Caja de Peligro / Riesgo (Amarilla) con links */
-    .warning-box { background: rgba(255, 204, 0, 0.15); border-left: 4px solid #ffcc00; padding: 15px; border-radius: 6px; text-align: left; margin: 20px 0; }
-    .warning-box h4 { margin: 0 0 8px 0; color: #ffcc00; display: flex; align-items: center; gap: 8px; }
-    .warning-box p { color: #c9d1d9; margin: 5px 0; font-size: 14px; }
-    .warning-box a { color: #ffcc00; font-weight: bold; text-decoration: underline; }
-    .warning-box a:hover { color: #ffffff; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Legends - Próximamente</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #090a0f;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 1rem;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Efecto de luz neón de fondo */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(230, 57, 70, 0.25) 0%, rgba(9, 10, 15, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
 
-    /* Caja de Alerta de Seguridad (Naranja) */
-    .alert-box { background: rgba(210, 153, 34, 0.15); border-left: 4px solid #d29922; padding: 15px; border-radius: 6px; text-align: left; margin: 20px 0; }
-    .alert-box h4 { margin: 0 0 8px 0; color: #f2cc60; display: flex; align-items: center; gap: 8px; }
-    .alert-box p { color: #c9d1d9; margin: 5px 0; font-size: 14px; }
-    .alert-box ul { margin: 8px 0 0 20px; padding: 0; color: #8b949e; font-size: 13px; }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            z-index: 1;
+            margin: auto;
+        }
 
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left; margin-top: 15px; }
-    .card { background: #21262d; padding: 15px; border-radius: 6px; border: 1px solid #30363d; }
-    .card h4 { margin: 0 0 8px 0; color: #f0f6fc; }
-    ol, ul { text-align: left; color: #8b949e; line-height: 1.6; }
-    footer { margin-top: 30px; font-size: 12px; color: #8b949e; }
-  </style>
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(230, 57, 70, 0.15);
+            border: 1px solid rgba(230, 57, 70, 0.4);
+            color: #ff4d5d;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 15px rgba(230, 57, 70, 0.2);
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 8vw, 5.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1;
+            background: linear-gradient(180deg, #ffffff 30%, #a5a5a5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.6rem);
+            font-weight: 400;
+            color: #e63946;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #b0b5c0;
+            line-height: 1.6;
+            max-width: 650px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(230, 57, 70, 0.5);
+        }
+
+        .feature-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #8a8f9d;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.1) 0%, rgba(0,0,0,0.4) 100%);
+            border: 1px solid rgba(230, 57, 70, 0.3);
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+        }
+
+        .cta-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .status-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            color: #2ec4b6;
+            font-weight: 600;
+            background: rgba(46, 196, 182, 0.1);
+            padding: 8px 18px;
+            border-radius: 30px;
+            border: 1px solid rgba(46, 196, 182, 0.3);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #2ec4b6;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #2ec4b6;
+        }
+
+        footer {
+            z-index: 1;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .studio-name {
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-top: 0.4rem;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>⚡ Goal Craft Studios ⚡</h1>
-  <div class="subtitle">Desarrollo de Apps y Experiencias Móviles</div>
+    <div class="container">
+        <div class="badge">Próximamente en Android</div>
+        
+        <h1 class="hero-title">Road Legends</h1>
+        <div class="hero-subtitle">La experiencia de conducción definitiva</div>
 
-  <div class="badges">
-    <img src="https://img.shields.io/badge/PRÓXIMAMENTE-GOAL%20CRAFT%20STORE-red?style=for-the-badge" alt="Status">
-    <img src="https://img.shields.io/badge/PLATAFORMA-ANDROID-brightgreen?style=for-the-badge&logo=android" alt="Platform">
-    <img src="https://img.shields.io/badge/ESTADO-EN%20DESARROLLO-orange?style=for-the-badge" alt="Version">
-  </div>
+        <p class="description">
+            Prepárate para tomar el control. Domina las calles con físicas realistas, conducción fluida y gráficos 3D diseñados para llevar el acelerador al límite.
+        </p>
 
-  <div class="btn-download">🚀 PRÓXIMAMENTE EN ITCH.IO</div>
+        <div class="features">
+            <div class="feature-card">
+                <span class="feature-icon">🏎️</span>
+                <div class="feature-title">Físicas 3D Reales</div>
+                <div class="feature-desc">Sensación de manejo fluida y controles precisos diseñados para móviles.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">⚡</span>
+                <div class="feature-title">Alto Rendimiento</div>
+                <div class="feature-desc">Optimizado al 100% para una experiencia gráfica rápida y sin tirones.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🏁</span>
+                <div class="feature-title">Siente la Velocidad</div>
+                <div class="feature-desc">Recorre pistas desafiantes y demuestra quién es la verdadera leyenda del camino.</div>
+            </div>
+        </div>
 
-  <hr>
-
-  <h3 class="section-title">📌 ¡Se viene Goal Craft Store!</h3>
-  <p>En <strong>Goal Craft Studios</strong> estamos trabajando en nuestro próximo gran proyecto: <strong>Goal Craft Store</strong>.</p>
-  <p>Una nueva aplicación diseñada para que puedas encontrar y descargar los <strong>juegos y apps más actualizados</strong>, rápidos y optimizados para tu dispositivo Android, todo desde un solo lugar fácil de usar.</p>
-
-  <!-- Caja de Advertencia, Responsabilidad y Enlaces Legales -->
-  <div class="warning-box">
-    <h4>⚠️ TÉRMINOS Y RESPONSABILIDAD</h4>
-    <p>Si vas a instalar esta aplicación, aceptas nuestros <a href="https://goalcraftstudios.github.io/Politicaprivacidad/" target="_blank">Términos de Privacidad</a> y nuestro <a href="https://goalcraftstudios.github.io/Acuerdo-de-terminos-y-condiciones/" target="_blank">Acuerdo de Términos y Condiciones</a>.</p>
-    <p>La instalación de esta aplicación se realiza estrictamente <strong>bajo tu propio riesgo</strong>, y tú asumes la responsabilidad total y absoluta de los archivos que decidas descargar a través de ella.</p>
-  </div>
-
-  <!-- Caja de Alerta de Seguridad y Publicidad (Ads) -->
-  <div class="alert-box">
-    <h4>🛡️ AVISO IMPORTANTE DE SEGURIDAD Y PUBLICIDAD (ADS)</h4>
-    <p><strong>Nuestra aplicación oficial (Goal Craft Store APK) es 100% limpia y segura.</strong></p>
-    <p>Sin embargo, debes tener en cuenta los siguientes puntos antes de navegar o descargar contenido:</p>
-    <ul>
-      <li><strong>Publicidad y Ads externos:</strong> La aplicación incluye anuncios. Algunos de estos anuncios pueden redirigirte a páginas web o servidores de descarga no seguros.</li>
-      <li><strong>Sin afiliación ni colaboración:</strong> Dichas páginas externas o descargas de anuncios <strong>NO son oficiales de Goal Craft Studios ni tenemos ninguna colaboración o alianza con ellas</strong>. Son enlaces publicitarios de terceros.</li>
-      <li><strong>Aplicaciones no seguras:</strong> Estamos trabajando continuamente en eliminar apps sospechosas, pero algunas de terceros o de la publicidad podrían contener malware o redirecciones innecesarias.</li>
-      <li>Evita colocar datos personales si un anuncio te redirige fuera de la app.</li>
-      <li>Descarga todo contenido bajo tu propio criterio y responsabilidad.</li>
-    </ul>
-  </div>
-
-  <h3 class="section-title">⚡ ¿Qué ofrecerá Goal Craft Store?</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>🎮 Juegos Actualizados</h4>
-      <p>Catálogo con las últimas versiones de tus juegos favoritos listos para instalar.</p>
+        <div class="cta-box">
+            <div class="cta-title">Estado del Desarrollo</div>
+            <div class="status-tag">
+                <span class="dot"></span> Versión Final en Preparación
+            </div>
+        </div>
     </div>
-    <div class="card">
-      <h4>🚀 Rápido y Ligero</h4>
-      <p>Una app super liviana que no consume recursos ni ralentiza tu teléfono.</p>
-    </div>
-    <div class="card">
-      <h4>🛡️ Filtro en Desarrollo</h4>
-      <p>Trabajamos continuamente para limpiar el catálogo y ofrecer contenido seguro.</p>
-    </div>
-    <div class="card">
-      <h4>🎨 Interfaz Moderna</h4>
-      <p>Diseño limpio y cómodo para encontrar lo que buscas en segundos.</p>
-    </div>
-  </div>
 
-  <hr>
-
-  <h3 class="section-title">🛠️ Requisitos del Sistema</h3>
-  <ul>
-    <li><strong>Sistema Operativo:</strong> Android 8.0 o superior.</li>
-    <li><strong>Conexión:</strong> Requerida para navegar el catálogo y descargar contenido.</li>
-  </ul>
-
-  <h3 class="section-title">📖 Próximos Pasos</h3>
-  <ol>
-    <li>Mantente atento a las novedades de <strong>Goal Craft Studios</strong>.</li>
-    <li>Muy pronto compartiremos el archivo de instalación oficial.</li>
-    <li>¡Prepárate para disfrutar de <strong>Goal Craft Store</strong>!</li>
-  </ol>
-
-  <hr>
-
-  <footer>
-    © Todos los derechos reservados a Santino R. Goal Craft Studios
-  </footer>
-</div>
+    <footer>
+        <div class="studio-name">Goal Craft Studios</div>
+        <div class="copyright">Todos los derechos reservados.</div>
+    </footer>
 
 </body>
 </html>
